@@ -1,5 +1,3 @@
-from cProfile import label
-from turtle import color
 import matplotlib.pyplot as plt
 import pandas as pd
 
@@ -16,7 +14,7 @@ plt.xticks(rotation = 0)
 plt.show()
 
 x = df['nivel_educacao'].value_counts().index.astype(str).tolist()
-y = df['nivel_educacao'].value_counts().values.astype(int)
+y = df['nivel_educacao'].value_counts().values.tolist()
 
 plt.figure(figsize=(10,6))
 plt.bar(x, y, color='#a713d4')
